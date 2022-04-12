@@ -1,0 +1,68 @@
+@import '/src/css/colors';
+@import '/src/css/reset';
+
+.gb--content {
+    width: 100%;
+    height: 735px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $DarkBlue;
+    font-family: "Manrope", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: $White;
+    &__advice {
+        background-color: $DarkGrayishBlue;
+        width: 500px;
+        height: 200px;
+        border-radius: 15px;
+        margin: auto;
+        padding: 30px;
+        vertical-align: middle;
+        h1 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 10px;
+            margin-bottom: 20px;
+            color: $NeonGreen;
+            font-weight: 800;
+        }
+
+        span {
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        svg {
+            margin-top: 40px;
+        }
+
+        .change{
+            background-color: $NeonGreen;
+            border-color: $NeonGreen;
+            font-size: 14px;
+            font-weight: 800;
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            margin-top: 25px;
+            svg{
+                margin-top: 2px;
+                align-items: center;
+            }
+        }
+    }
+
+    footer{
+        font-size: 12px;
+        color: $LightCyan;
+        text-align: center;
+        margin-bottom: 10px;
+        a{
+            color: $NeonGreen;
+        }
+    }
+}
