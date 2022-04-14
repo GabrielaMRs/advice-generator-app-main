@@ -6,6 +6,7 @@
       <span
         >CONSELHO</span
       >
+      
 
       <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" fill-rule="evenodd">
@@ -38,28 +39,13 @@
 </template>
 
 <script>
+
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
   },
 };
-
-/* new Vue({
-  el: "#app",
-  data () {
-    return {
-      info: null,
-    }
-  },
-  mounted(){
-    axios
-      .get('https://api.adviceslip.com/advice/{slip_id}')
-      .then(response => {
-        this.info = response.data.slip.advice;
-      })
-  }
-}); */
 </script>
 
 

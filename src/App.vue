@@ -28,4 +28,8 @@ export default {
 </script>
 
 <style lang="scss">
+
+body{
+  background-color: hsl(218, 23%, 16%);
+}
 </style>
