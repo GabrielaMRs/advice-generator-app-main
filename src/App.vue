@@ -11,7 +11,6 @@
 
   <title>Advice generatror</title>
     <HelloWorld />
-
 </template>
 
 <script>
