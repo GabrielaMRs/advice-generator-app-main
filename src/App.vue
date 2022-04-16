@@ -9,11 +9,9 @@
     href="./images/favicon-32x32.png"
   />
 
-  <title>Frontend Mentor | Advice generator app</title>
+  <title>Advice generatror</title>
+    <HelloWorld />
 
-  <div class="tudo">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
 </template>
 
 <script>
@@ -22,7 +20,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    HelloWorld
   },
 };
 </script>

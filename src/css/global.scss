@@ -1,7 +1,6 @@
 @import '/src/css/colors';
 @import '/src/css/reset';
 
-
 .gb--content {
     width: 100%;
     height: 735px;
@@ -15,14 +14,19 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: $White;
+
     &__advice {
+        display: flex;
+        flex-direction: column;
         background-color: $DarkGrayishBlue;
-        width: 500px;
-        height: 200px;
+        width: 400px;
+        height: auto;
         border-radius: 15px;
         margin: auto;
-        padding: 30px;
-        vertical-align: middle;
+        padding: 60px;
+        align-items: center;
+        position: relative;
+
         h1 {
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -35,34 +39,40 @@
         span {
             font-size: 28px;
             font-weight: 800;
+            margin-bottom: 20px;
         }
 
         svg {
-            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
-        .change{
+        .change {
             background-color: $NeonGreen;
             border-color: $NeonGreen;
-            font-size: 14px;
             font-weight: 800;
             height: 60px;
             width: 60px;
             border-radius: 100%;
-            margin-top: 25px;
-            svg{
-                margin-top: 2px;
-                align-items: center;
+            position: absolute;
+            top: 90%;
+            left: 45%;
+            cursor: pointer;
+            svg {
+                margin: auto;
+            }
+            :hover{
+                background-color: $NeonGreen;
+                border-color: $NeonGreen;
             }
         }
     }
 
-    footer{
-        font-size: 12px;
+    footer {
+        font-size: 18px;
         color: $LightCyan;
         text-align: center;
-        margin-bottom: 10px;
-        a{
+
+        a {
             color: $NeonGreen;
         }
     }
