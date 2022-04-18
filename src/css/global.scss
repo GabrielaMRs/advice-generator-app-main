@@ -57,20 +57,24 @@
             top: 90%;
             left: 45%;
             cursor: pointer;
+
             svg {
                 margin: auto;
             }
-            :hover{
-                background-color: $NeonGreen;
-                border-color: $NeonGreen;
-            }
+        }
+
+        .change:hover {
+            background-color: $NeonGreen;
+            border-color: $NeonGreen;
+            opacity: 0.9;
+            transform: scale(1.1);
+            transition: all 0.5s;
         }
     }
 
     footer {
-        font-size: 18px;
+        font-size: 14px;
         color: $LightCyan;
-        text-align: center;
 
         a {
             color: $NeonGreen;
