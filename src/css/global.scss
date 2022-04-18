@@ -66,9 +66,7 @@
         .change:hover {
             background-color: $NeonGreen;
             border-color: $NeonGreen;
-            opacity: 0.9;
-            transform: scale(1.1);
-            transition: all 0.5s;
+            box-shadow: 0 0 10px $NeonGreen, 0 0 30px $NeonGreen;
         }
     }
 

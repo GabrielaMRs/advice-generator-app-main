@@ -47,17 +47,17 @@ export default {
       advice: "",
     };
   },
-  mounted() {
+  methods:{
+    getAdvice(){
       axios
         .get("https://api.adviceslip.com/advice")
         .then(response => { this.advice = response.data.slip.advice; 
                             this.id = response.data.slip.id;})
-  },
-  methods:{
-    getAdvice(){
-      window.location.reload();
     }
-  }
+  },
+  created() {
+    this.getAdvice();
+  },
 };
 </script>
 
