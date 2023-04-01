@@ -5,4 +5,5 @@ module.exports = defineConfig({
 
 module.exports = {
   publicPath: '/advice-generator-app-main/',
+  outputDir: 'dist'
 }
