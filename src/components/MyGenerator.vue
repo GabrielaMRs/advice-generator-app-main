@@ -1,7 +1,7 @@
 <template>
   <div class="gb--content">
     <div class="gb--content__advice">
-      <h1>advice #{{ id }}</h1>
+      <span class="number-advice">advice #{{ id }}</span>
 
       <span>{{ advice }}</span>
       <br />
