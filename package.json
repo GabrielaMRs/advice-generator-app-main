@@ -12,7 +12,8 @@
   "dependencies": {
     "axios": "^0.26.1",
     "core-js": "^3.37.1",
-    "vue": "^3.4.27"
+    "vue": "^3.4.27",
+    "vue-loading-overlay": "^6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.6",

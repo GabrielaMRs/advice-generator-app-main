@@ -1,19 +1,23 @@
 <template>
   <div class="gb--content">
     <div class="gb--content__advice">
-      <span class="number-advice">advice #{{ id }}</span>
-
-      <span>{{ advice }}</span>
-      <br />
-      <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" fill-rule="evenodd">
-          <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
-          <g transform="translate(212)" fill="#CEE3E9">
-            <rect width="6" height="16" rx="3" />
-            <rect x="14" width="6" height="16" rx="3" />
+      <div v-if="loading">
+        Loading...
+      </div>
+      <div v-else class="main-advice">
+        <span class="number-advice">advice #{{ id }}</span>
+        <span>{{ advice }}</span>
+        <br />
+        <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd">
+            <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
+            <g transform="translate(212)" fill="#CEE3E9">
+              <rect width="6" height="16" rx="3" />
+              <rect x="14" width="6" height="16" rx="3" />
+            </g>
           </g>
-        </g>
-      </svg>
+        </svg>
+      </div>
       <br />
       <button @click="getAdvice" class="change">
         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -40,11 +44,11 @@ import axios from "axios";
 
 export default {
   name: "MyGenerator",
-  components: { axios },
   data() {
     return {
       id: "",
       advice: "",
+      loading: true
     };
   },
   methods:{
@@ -53,6 +57,7 @@ export default {
         .get("https://api.adviceslip.com/advice")
         .then(response => { this.advice = response.data.slip.advice; 
                             this.id = response.data.slip.id;})
+        .finally(() => this.loading = false)
     }
   },
   created() {
